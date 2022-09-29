@@ -21,10 +21,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [BASE] = LAYOUT( \
-    KC_ESC,   KC_Q,    KC_W,    KC_E,   KC_R,     KC_T,   KC_LBRC,      KC_RBRC,    KC_Y,   KC_U,     KC_I,    KC_O,   KC_P,    KC_BSPC,\
-    KC_TAB,   KC_A,    KC_S,    KC_D,   KC_F,     KC_G,   KC_UP,        KC_LEFT,    KC_H,   KC_J,     KC_K,    KC_L,   KC_SCLN, KC_DELT,\
-    KC_LSFT,  KC_Z,    KC_X,    KC_C,   KC_V,     KC_B,   KC_DOWN,      KC_RGHT,    KC_N,   KC_M,     KC_COMM, KC_DOT, KC_SLSH, KC_HOME,\
-    KC_LCTRL, KC_LALT, KC_LGUI, KC_INS, MO(META), KC_SPC, KC_MHEN,      KC_HENK,    KC_ENT, MO(SYMB), KC_F2,   KC_APP, KC_PSCR, KC_END  \
+    KC_ESC,  KC_Q,    KC_W,    KC_E,   KC_R,     KC_T,   KC_LBRC,      KC_RBRC,    KC_Y,   KC_U,     KC_I,    KC_O,   KC_P,    KC_BSPC,\
+    KC_TAB,  KC_A,    KC_S,    KC_D,   KC_F,     KC_G,   KC_UP,        KC_LEFT,    KC_H,   KC_J,     KC_K,    KC_L,   KC_SCLN, KC_DEL,\
+    KC_LSFT, KC_Z,    KC_X,    KC_C,   KC_V,     KC_B,   KC_DOWN,      KC_RGHT,    KC_N,   KC_M,     KC_COMM, KC_DOT, KC_SLSH, KC_HOME,\
+    KC_LCTL, KC_LALT, KC_LGUI, KC_INS, MO(META), KC_SPC, KC_MHEN,      KC_HENK,    KC_ENT, MO(SYMB), KC_F2,   KC_APP, KC_PSCR, KC_END  \
   ),
 
   /* META
@@ -50,19 +50,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   ,------------------------------------------------.
    * | ESC  |   !  |   @  |   #  |   $  |   %  |  [   |   |  ]   |   ^  |   &  |   *  |   (  |   )  | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Tab  |   ~  |   "  |   '  |   `  |   \  | Up   |   | Left |      |      |      |      |  ;:  | Del  |
+   * | Tab  |   ~  |   "  |   '  |   `  |   \  | Up   |   | Left |      |      |      |      |      | Del  |
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
-   * | Sft  |      |      |      |      |      | Down |   |Right |      |      |   <  |   >  |  /?  | Home |
+   * | Sft  | HOST | DEV1 | DEV2 | DEV3 | DEV4 | Down |   |Right |SLEEP | BATT |      | BLT  | USB  | Home |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    * | Ctrl | Alt  |Reset | Ins  |~META |Space |Muhen |   | Henk |Enter |~SYMB | F2   | App  |PrtSc | End  |
    * |      |      |      |      |      |      |      |   |      |      |      |      |      |      |      |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
-    _______, S(KC_1),   S(KC_2),    S(KC_3), S(KC_4), S(KC_5), _______,   _______, S(KC_6), S(KC_7), S(KC_8),    S(KC_9),   S(KC_0), _______,\
-    _______, S(KC_GRV), S(KC_QUOT), KC_QUOT, KC_GRV,  KC_BSLS, _______,   _______, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,   _______, _______,\
-    _______, XXXXXXX,   XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, _______,   _______, XXXXXXX, XXXXXXX, S(KC_COMM), S(KC_DOT), _______, _______,\
-    _______, _______,   RESET,      _______, _______, _______, _______,   _______, _______, _______, _______,    _______,   _______, _______ \
+    _______, S(KC_1),   S(KC_2),    S(KC_3), S(KC_4), S(KC_5), _______,   _______, S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), _______,\
+    _______, S(KC_GRV), S(KC_QUOT), KC_QUOT, KC_GRV,  KC_BSLS, _______,   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,\
+    _______, AD_WO_L,   ADV_ID1,    ADV_ID2, ADV_ID3, ADV_ID4, _______,   _______, ENT_SLP, BATT_LV, XXXXXXX, SEL_BLE, SEL_USB, _______,\
+    _______, _______,   RESET,      _______, _______, _______, _______,   _______, _______, _______, _______, _______, _______, _______ \
   )
 
 };
